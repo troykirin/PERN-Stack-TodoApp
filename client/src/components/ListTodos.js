@@ -11,14 +11,14 @@ const ListTodos = () => {
 
       setTodos(jsonData); //setTodos only way to change state
 
-      console.log(jsonData);
+      console.log(todos);
     } catch (err) {
       console.log(err.message);
     }
   };
   useEffect(() => {
     getTodos();
-  });
+  }, []);
   return (
     <Fragment>
       {" "}
