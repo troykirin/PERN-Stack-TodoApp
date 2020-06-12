@@ -12,6 +12,7 @@ const InputTodo = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       }); // fetch does a get request by default
+      window.location = "/";
       console.log(response);
     } catch (err) {
       console.error(err.message);
