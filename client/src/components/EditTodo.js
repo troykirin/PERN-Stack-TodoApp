@@ -43,13 +43,22 @@ const EditTodo = ({ todo }) => {
       {/* the way a modal works is that it references an id. so use a template string to the primary key inside our todo object. */}
       {/* then the button we click needs to also point(target) to the correct modal, so using the # to target and then another template string. */}
 
-      <div className="modal" id={`id${todo.todo_id}`}>
+      <div
+        className="modal"
+        id={`id${todo.todo_id}`}
+        onClick={() => setDescription(todo.description)}
+      >
         <div className="modal-dialog">
           <div className="modal-content">
             {/* <!-- Modal Header --> */}
             <div className="modal-header">
               <h4 className="modal-title">Edit Todo</h4>
-              <button type="button" className="close" data-dismiss="modal">
+              <button
+                type="button"
+                className="close"
+                data-dismiss="modal"
+                onClick={() => setDescription(todo.description)}
+              >
                 &times;
               </button>
             </div>
