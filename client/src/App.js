@@ -3,6 +3,7 @@ import "./App.css";
 import InputTodo from "./components/inputTodo";
 import ListTodos from "./components/ListTodos";
 
+// beginning JS function, returns a fragment containing two components [InputTodo, ListTodos]
 function App() {
   return (
     <Fragment>

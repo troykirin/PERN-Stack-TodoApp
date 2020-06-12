@@ -7,7 +7,7 @@ const pool = require("./db");
 app.use(cors());
 app.use(express.json());
 
-// routes
+// ROUTES
 
 // create a todo
 app.post("/todos", async (req, res) => {
@@ -23,6 +23,7 @@ app.post("/todos", async (req, res) => {
     console.log(err.message);
   }
 });
+
 // get all todos
 app.get("/todos", async (req, res) => {
   try {
@@ -72,7 +73,9 @@ app.delete("/todos/:id", async (req, res) => {
   }
 });
 
+// create express server
 app.use(express.json());
+// listen to the port 5000 on localhost
 app.listen(5000, () => {
   console.log("Server2 started on port 5000.");
 });
