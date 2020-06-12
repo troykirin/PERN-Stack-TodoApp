@@ -1,6 +1,6 @@
 // Using react hooks
 import React, { Fragment, useEffect, useState } from "react";
-
+import EditTodo from "./EditTodo";
 // primary component "listtodos"
 const ListTodos = () => {
   //create state
@@ -59,7 +59,9 @@ const ListTodos = () => {
           {todos.map((todo) => (
             <tr key={todo.todo_id}>
               <td>{todo.description}</td>
-              <td>Edit</td>
+              <td>
+                <EditTodo />
+              </td>
               <td>
                 <button
                   className="btn btn-danger"
