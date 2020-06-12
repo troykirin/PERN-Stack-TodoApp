@@ -60,7 +60,8 @@ const ListTodos = () => {
             <tr key={todo.todo_id}>
               <td>{todo.description}</td>
               <td>
-                <EditTodo />
+                {/* passing todo as a prop during component call */}
+                <EditTodo todo={todo} />
               </td>
               <td>
                 <button
