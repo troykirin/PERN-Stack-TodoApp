@@ -10,8 +10,6 @@ const ListTodos = () => {
       const jsonData = await response.json(); // parse the json data
 
       setTodos(jsonData); //setTodos only way to change state
-
-      console.log(todos);
     } catch (err) {
       console.log(err.message);
     }
@@ -35,6 +33,13 @@ const ListTodos = () => {
             {/*    <td>John</td>
             <td>Doe</td>
             <td>john@example.com</td> */}
+            {todos.map((todo) => (
+              <tr>
+                <td>{todo.description}</td>
+                <td>Edit</td>
+                <td>Delete</td>
+              </tr>
+            ))}
           </tr>
         </tbody>
       </table>
